@@ -13,13 +13,13 @@ module.exports = function(grunt) {
             },
             pages: {
                 options: {
-                    remote: 'https://github.com/AaronMcCloskey/localhubb.git',
+                    remote: 'https://github.com/AaronMcCloskey/js-header.git',
                     branch: 'gh-pages'
                 }
             },
             heroku: {
                 options: {
-                    remote: 'https://git.heroku.com/localhubb.git',
+                    remote: 'https://git.heroku.com/js-header.git',
                     branch: 'master',
                     tag: pkg.version
                 }
