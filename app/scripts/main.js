@@ -7,22 +7,22 @@ var container = new PIXI.Container();
 app.stage.addChild(container);
 
 PIXI.loader
-    .add("images/logo_NRM.png")
-    .add("images/logo.png")
-    .add("images/bg.jpg")
-    .add("images/mountains.png")
-    .add("images/trees.png")
-    .add("images/cloud1.png")
-    .add("images/cloud2.png")
-    .add("images/blur1.png")
-    .add("images/blur2.png")
+    .add('images/logo_NRM.png')
+    .add('images/logo.png')
+    .add('images/bg.jpg')
+    .add('images/mountains.png')
+    .add('images/trees.png')
+    .add('images/cloud1.png')
+    .add('images/cloud2.png')
+    .add('images/blur1.png')
+    .add('images/blur2.png')
     .load(setup);
 
 function setup() {
     posX = 0;
     count = 0;
 
-    displacementSprite = new PIXI.Sprite(PIXI.loader.resources["images/logo_NRM.png"].texture);
+    displacementSprite = new PIXI.Sprite(PIXI.loader.resources['images/logo_NRM.png'].texture);
     var displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
     displacementSprite.anchor.set(0.5);
     displacementSprite.x = app.renderer.width / 2;
@@ -30,7 +30,7 @@ function setup() {
 
     app.stage.addChild(displacementSprite);
 
-    logo = new PIXI.Sprite(PIXI.loader.resources["images/logo.png"].texture);
+    logo = new PIXI.Sprite(PIXI.loader.resources['images/logo.png'].texture);
     logo.anchor.set(0.5);
     logo.x = app.renderer.width / 2;
     logo.y = app.renderer.height / 2;
@@ -39,45 +39,45 @@ function setup() {
     container.filters = [displacementFilter];
     displacementFilter.scale.x = 120;
     displacementFilter.scale.y = 120;
-    var bg = new PIXI.Sprite(PIXI.loader.resources["images/bg.jpg"].texture);
+    var bg = new PIXI.Sprite(PIXI.loader.resources['images/bg.jpg'].texture);
     bg.width = app.renderer.width;
     bg.height = app.renderer.height;
     container.addChild(bg);
 
-    blur1 = new PIXI.Sprite(PIXI.loader.resources["images/blur1.png"].texture);
+    blur1 = new PIXI.Sprite(PIXI.loader.resources['images/blur1.png'].texture);
     blur1.anchor.set(0.5);
     blur1.scaleX = 3;
     blur1.x = app.renderer.width / 4;
     blur1.y = app.renderer.height / 2;
     container.addChild(blur1);
 
-    blur2 = new PIXI.Sprite(PIXI.loader.resources["images/blur2.png"].texture);
+    blur2 = new PIXI.Sprite(PIXI.loader.resources['images/blur2.png'].texture);
     blur2.anchor.set(0.5);
     blur2.scaleX = 3;
     blur2.x = app.renderer.width / 2 + app.renderer.width / 4;
     blur2.y = app.renderer.height / 2;
     container.addChild(blur2);
 
-    mountains = new PIXI.Sprite(PIXI.loader.resources["images/mountains.png"].texture);
+    mountains = new PIXI.Sprite(PIXI.loader.resources['images/mountains.png'].texture);
     mountains.anchor.set(0.5);
     mountains.x = app.renderer.width / 2;
     mountains.y = app.renderer.height - (mountains.height / 2);
     container.addChild(mountains);
 
-    cloud1 = new PIXI.Sprite(PIXI.loader.resources["images/cloud1.png"].texture);
+    cloud1 = new PIXI.Sprite(PIXI.loader.resources['images/cloud1.png'].texture);
     cloud1.anchor.set(0.5);
     cloud1.x = app.renderer.width / 2;
     cloud1.y = cloud1.height / 2;
     cloud1.blendMode = PIXI.BLEND_MODES.OVERLAY;
     container.addChild(cloud1);
 
-    trees = new PIXI.Sprite(PIXI.loader.resources["images/trees.png"].texture);
+    trees = new PIXI.Sprite(PIXI.loader.resources['images/trees.png'].texture);
     trees.anchor.set(0.5);
     trees.x = app.renderer.width / 2;
     trees.y = app.renderer.height - (trees.height / 2);
     container.addChild(trees);
 
-    cloud2 = new PIXI.Sprite(PIXI.loader.resources["images/cloud2.png"].texture);
+    cloud2 = new PIXI.Sprite(PIXI.loader.resources['images/cloud2.png'].texture);
     cloud2.anchor.set(0.5);
     cloud2.x = app.renderer.width / 2;
     cloud2.y = app.renderer.height - (cloud2.height / 2);
